@@ -1,0 +1,1429 @@
+Analysis & Synthesis report for GECKO
+Wed Oct 21 11:54:56 2020
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. State Machine - |GECKO|CPU:inst|controller:controller_0|current_state
+ 10. User-Specified and Inferred Latches
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Registers Added for RAM Pass-Through Logic
+ 15. Registers Packed Into Inferred Megafunctions
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for ROM:ROM_0|ROM_Block:romInst|altsyncram:altsyncram_component|altsyncram_rna1:auto_generated
+ 18. Source assignments for CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0|altsyncram_usi1:auto_generated
+ 19. Source assignments for CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_1|altsyncram_usi1:auto_generated
+ 20. Source assignments for RAM:RAM_0|altsyncram:ram_rtl_0|altsyncram_p4e1:auto_generated
+ 21. Parameter Settings for User Entity Instance: ROM:ROM_0|ROM_Block:romInst|altsyncram:altsyncram_component
+ 22. Parameter Settings for Inferred Entity Instance: CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0
+ 23. Parameter Settings for Inferred Entity Instance: CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_1
+ 24. Parameter Settings for Inferred Entity Instance: RAM:RAM_0|altsyncram:ram_rtl_0
+ 25. altsyncram Parameter Settings by Entity Instance
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Oct 21 11:54:56 2020       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                      ; GECKO                                       ;
+; Top-level Entity Name              ; GECKO                                       ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 1,527                                       ;
+;     Total combinational functions  ; 1,307                                       ;
+;     Dedicated logic registers      ; 383                                         ;
+; Total registers                    ; 383                                         ;
+; Total pins                         ; 102                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 67,584                                      ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE30F23C8       ;                    ;
+; Top-level entity name                                            ; GECKO              ; GECKO              ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; On                 ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                              ;
++----------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path             ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                                                     ; Library ;
++----------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; GECKO.bdf                                    ; yes             ; User Block Diagram/Schematic File                     ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/quartus/GECKO.bdf                                    ;         ;
+; ALU.bdf                                      ; yes             ; User Block Diagram/Schematic File                     ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/quartus/ALU.bdf                                      ;         ;
+; CPU.bdf                                      ; yes             ; User Block Diagram/Schematic File                     ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/quartus/CPU.bdf                                      ;         ;
+; ../vhdl/add_sub.vhd                          ; yes             ; User VHDL File                                        ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/add_sub.vhd                                     ;         ;
+; ../vhdl/buttons.vhd                          ; yes             ; User VHDL File                                        ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/buttons.vhd                                     ;         ;
+; ../vhdl/comparator.vhd                       ; yes             ; User VHDL File                                        ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/comparator.vhd                                  ;         ;
+; ../vhdl/controller.vhd                       ; yes             ; User VHDL File                                        ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd                                  ;         ;
+; ../vhdl/decoder.vhd                          ; yes             ; User VHDL File                                        ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/decoder.vhd                                     ;         ;
+; ../vhdl/extend.vhd                           ; yes             ; User VHDL File                                        ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/extend.vhd                                      ;         ;
+; ../vhdl/IR.vhd                               ; yes             ; User VHDL File                                        ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd                                          ;         ;
+; ../vhdl/LEDs.vhd                             ; yes             ; User VHDL File                                        ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/LEDs.vhd                                        ;         ;
+; ../vhdl/logic_unit.vhd                       ; yes             ; User VHDL File                                        ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd                                  ;         ;
+; ../vhdl/multiplexer.vhd                      ; yes             ; User VHDL File                                        ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/multiplexer.vhd                                 ;         ;
+; ../vhdl/mux2x5.vhd                           ; yes             ; User VHDL File                                        ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/mux2x5.vhd                                      ;         ;
+; ../vhdl/mux2x16.vhd                          ; yes             ; User VHDL File                                        ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/mux2x16.vhd                                     ;         ;
+; ../vhdl/mux2x32.vhd                          ; yes             ; User VHDL File                                        ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/mux2x32.vhd                                     ;         ;
+; ../vhdl/PC.vhd                               ; yes             ; User VHDL File                                        ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/PC.vhd                                          ;         ;
+; ../vhdl/RAM.vhd                              ; yes             ; User VHDL File                                        ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/RAM.vhd                                         ;         ;
+; ../vhdl/register_file.vhd                    ; yes             ; User VHDL File                                        ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/register_file.vhd                               ;         ;
+; ../vhdl/ROM.vhd                              ; yes             ; User VHDL File                                        ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/ROM.vhd                                         ;         ;
+; ../vhdl/ROM_Block.vhd                        ; yes             ; User Wizard-Generated File                            ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/ROM_Block.vhd                                   ;         ;
+; ../vhdl/shift_unit.vhd                       ; yes             ; User VHDL File                                        ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/shift_unit.vhd                                  ;         ;
+; ROM.hex                                      ; yes             ; User Hexadecimal (Intel-Format) File                  ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/quartus/ROM.hex                                      ;         ;
+; altsyncram.tdf                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                                                            ;         ;
+; stratix_ram_block.inc                        ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                     ;         ;
+; lpm_mux.inc                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                               ;         ;
+; lpm_decode.inc                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                                                            ;         ;
+; aglobal201.inc                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                                                            ;         ;
+; a_rdenreg.inc                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                             ;         ;
+; altrom.inc                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                                                                ;         ;
+; altram.inc                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                                                                ;         ;
+; altdpram.inc                                 ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                                                              ;         ;
+; db/altsyncram_rna1.tdf                       ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/quartus/db/altsyncram_rna1.tdf                       ;         ;
+; db/altsyncram_usi1.tdf                       ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/quartus/db/altsyncram_usi1.tdf                       ;         ;
+; db/gecko.ram0_register_file_87c776fc.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/quartus/db/gecko.ram0_register_file_87c776fc.hdl.mif ;         ;
+; db/altsyncram_p4e1.tdf                       ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/quartus/db/altsyncram_p4e1.tdf                       ;         ;
++----------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 1,527     ;
+;                                             ;           ;
+; Total combinational functions               ; 1307      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 727       ;
+;     -- 3 input functions                    ; 419       ;
+;     -- <=2 input functions                  ; 161       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 1247      ;
+;     -- arithmetic mode                      ; 60        ;
+;                                             ;           ;
+; Total registers                             ; 383       ;
+;     -- Dedicated logic registers            ; 383       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 102       ;
+; Total memory bits                           ; 67584     ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 511       ;
+; Total fan-out                               ; 7422      ;
+; Average fan-out                             ; 3.67      ;
++---------------------------------------------+-----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                          ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                               ; Entity Name     ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |GECKO                                       ; 1307 (146)          ; 383 (0)                   ; 67584       ; 0            ; 0       ; 0         ; 102  ; 0            ; |GECKO                                                                                            ; GECKO           ; work         ;
+;    |CPU:inst|                                ; 1001 (0)            ; 203 (0)                   ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst                                                                                   ; CPU             ; work         ;
+;       |ALU:alu_0|                            ; 579 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0                                                                         ; ALU             ; work         ;
+;          |add_sub:add_sub_0|                 ; 79 (79)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|add_sub:add_sub_0                                                       ; add_sub         ; work         ;
+;          |comparator:comparator_0|           ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|comparator:comparator_0                                                 ; comparator      ; work         ;
+;          |logic_unit:logic_unit_0|           ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|logic_unit:logic_unit_0                                                 ; logic_unit      ; work         ;
+;          |multiplexer:multiplexer_0|         ; 116 (116)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0                                               ; multiplexer     ; work         ;
+;          |shift_unit:shift_unit_0|           ; 371 (371)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|shift_unit:shift_unit_0                                                 ; shift_unit      ; work         ;
+;       |IR:IR_0|                              ; 0 (0)               ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|IR:IR_0                                                                           ; IR              ; work         ;
+;       |PC:PC_0|                              ; 46 (46)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|PC:PC_0                                                                           ; PC              ; work         ;
+;       |controller:controller_0|              ; 75 (75)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|controller:controller_0                                                           ; controller      ; work         ;
+;       |mux2x16:mux_addr|                     ; 13 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|mux2x16:mux_addr                                                                  ; mux2x16         ; work         ;
+;       |mux2x32:mux_b|                        ; 33 (33)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|mux2x32:mux_b                                                                     ; mux2x32         ; work         ;
+;       |mux2x32:mux_data|                     ; 174 (174)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|mux2x32:mux_data                                                                  ; mux2x32         ; work         ;
+;       |mux2x5:mux_aw|                        ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|mux2x5:mux_aw                                                                     ; mux2x5          ; work         ;
+;       |register_file:register_file_0|        ; 76 (76)             ; 150 (150)                 ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|register_file:register_file_0                                                     ; register_file   ; work         ;
+;          |altsyncram:reg_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0                                ; altsyncram      ; work         ;
+;             |altsyncram_usi1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0|altsyncram_usi1:auto_generated ; altsyncram_usi1 ; work         ;
+;          |altsyncram:reg_rtl_1|              ; 0 (0)               ; 0 (0)                     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_1                                ; altsyncram      ; work         ;
+;             |altsyncram_usi1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_1|altsyncram_usi1:auto_generated ; altsyncram_usi1 ; work         ;
+;    |LEDs:LEDs_0|                             ; 123 (123)           ; 115 (115)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|LEDs:LEDs_0                                                                                ; LEDs            ; work         ;
+;    |RAM:RAM_0|                               ; 9 (9)               ; 55 (55)                   ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|RAM:RAM_0                                                                                  ; RAM             ; work         ;
+;       |altsyncram:ram_rtl_0|                 ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|RAM:RAM_0|altsyncram:ram_rtl_0                                                             ; altsyncram      ; work         ;
+;          |altsyncram_p4e1:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|RAM:RAM_0|altsyncram:ram_rtl_0|altsyncram_p4e1:auto_generated                              ; altsyncram_p4e1 ; work         ;
+;    |ROM:ROM_0|                               ; 2 (2)               ; 1 (1)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|ROM:ROM_0                                                                                  ; ROM             ; work         ;
+;       |ROM_Block:romInst|                    ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|ROM:ROM_0|ROM_Block:romInst                                                                ; ROM_Block       ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|ROM:ROM_0|ROM_Block:romInst|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
+;             |altsyncram_rna1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|ROM:ROM_0|ROM_Block:romInst|altsyncram:altsyncram_component|altsyncram_rna1:auto_generated ; altsyncram_rna1 ; work         ;
+;    |buttons:buttons_0|                       ; 19 (19)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|buttons:buttons_0                                                                          ; buttons         ; work         ;
+;    |decoder:decoder_0|                       ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|decoder:decoder_0                                                                          ; decoder         ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                   ;
++-------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+----------------------------------------------+
+; Name                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                                          ;
++-------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+----------------------------------------------+
+; CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0|altsyncram_usi1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024  ; db/GECKO.ram0_register_file_87c776fc.hdl.mif ;
+; CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_1|altsyncram_usi1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024  ; db/GECKO.ram0_register_file_87c776fc.hdl.mif ;
+; RAM:RAM_0|altsyncram:ram_rtl_0|altsyncram_p4e1:auto_generated|ALTSYNCRAM                              ; AUTO ; Simple Dual Port ; 1024         ; 32           ; 1024         ; 32           ; 32768 ; None                                         ;
+; ROM:ROM_0|ROM_Block:romInst|altsyncram:altsyncram_component|altsyncram_rna1:auto_generated|ALTSYNCRAM ; AUTO ; ROM              ; 1024         ; 32           ; --           ; --           ; 32768 ; ../quartus/ROM.hex                           ;
++-------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+----------------------------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |GECKO|CPU:inst|controller:controller_0|current_state                                                                                                                                                                                                                       ;
++----------------------+--------------------+-------------------+----------------------+--------------------+---------------------+---------------------+---------------------+---------------------+--------------------+----------------------+----------------------+----------------------+
+; Name                 ; current_state.CALL ; current_state.JMP ; current_state.BRANCH ; current_state.I_OP ; current_state.LOAD2 ; current_state.LOAD1 ; current_state.BREAK ; current_state.STORE ; current_state.R_OP ; current_state.DECODE ; current_state.FETCH2 ; current_state.FETCH1 ;
++----------------------+--------------------+-------------------+----------------------+--------------------+---------------------+---------------------+---------------------+---------------------+--------------------+----------------------+----------------------+----------------------+
+; current_state.FETCH1 ; 0                  ; 0                 ; 0                    ; 0                  ; 0                   ; 0                   ; 0                   ; 0                   ; 0                  ; 0                    ; 0                    ; 0                    ;
+; current_state.FETCH2 ; 0                  ; 0                 ; 0                    ; 0                  ; 0                   ; 0                   ; 0                   ; 0                   ; 0                  ; 0                    ; 1                    ; 1                    ;
+; current_state.DECODE ; 0                  ; 0                 ; 0                    ; 0                  ; 0                   ; 0                   ; 0                   ; 0                   ; 0                  ; 1                    ; 0                    ; 1                    ;
+; current_state.R_OP   ; 0                  ; 0                 ; 0                    ; 0                  ; 0                   ; 0                   ; 0                   ; 0                   ; 1                  ; 0                    ; 0                    ; 1                    ;
+; current_state.STORE  ; 0                  ; 0                 ; 0                    ; 0                  ; 0                   ; 0                   ; 0                   ; 1                   ; 0                  ; 0                    ; 0                    ; 1                    ;
+; current_state.BREAK  ; 0                  ; 0                 ; 0                    ; 0                  ; 0                   ; 0                   ; 1                   ; 0                   ; 0                  ; 0                    ; 0                    ; 1                    ;
+; current_state.LOAD1  ; 0                  ; 0                 ; 0                    ; 0                  ; 0                   ; 1                   ; 0                   ; 0                   ; 0                  ; 0                    ; 0                    ; 1                    ;
+; current_state.LOAD2  ; 0                  ; 0                 ; 0                    ; 0                  ; 1                   ; 0                   ; 0                   ; 0                   ; 0                  ; 0                    ; 0                    ; 1                    ;
+; current_state.I_OP   ; 0                  ; 0                 ; 0                    ; 1                  ; 0                   ; 0                   ; 0                   ; 0                   ; 0                  ; 0                    ; 0                    ; 1                    ;
+; current_state.BRANCH ; 0                  ; 0                 ; 1                    ; 0                  ; 0                   ; 0                   ; 0                   ; 0                   ; 0                  ; 0                    ; 0                    ; 1                    ;
+; current_state.JMP    ; 0                  ; 1                 ; 0                    ; 0                  ; 0                   ; 0                   ; 0                   ; 0                   ; 0                  ; 0                    ; 0                    ; 1                    ;
+; current_state.CALL   ; 1                  ; 0                 ; 0                    ; 0                  ; 0                   ; 0                   ; 0                   ; 0                   ; 0                  ; 0                    ; 0                    ; 1                    ;
++----------------------+--------------------+-------------------+----------------------+--------------------+---------------------+---------------------+---------------------+---------------------+--------------------+----------------------+----------------------+----------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                   ;
++---------------------------------------------------------+----------------------------------------------------+------------------------+
+; Latch Name                                              ; Latch Enable Signal                                ; Free of Timing Hazards ;
++---------------------------------------------------------+----------------------------------------------------+------------------------+
+; CPU:inst|controller:controller_0|next_state.BRANCH_879  ; CPU:inst|controller:controller_0|next_state.FETCH1 ; yes                    ;
+; CPU:inst|controller:controller_0|next_state.R_OP_1113   ; CPU:inst|controller:controller_0|next_state.FETCH1 ; yes                    ;
+; CPU:inst|controller:controller_0|next_state.STORE_1074  ; CPU:inst|controller:controller_0|next_state.FETCH1 ; yes                    ;
+; CPU:inst|controller:controller_0|next_state.LOAD1_996   ; CPU:inst|controller:controller_0|next_state.FETCH1 ; yes                    ;
+; CPU:inst|controller:controller_0|next_state.FETCH1_1230 ; CPU:inst|controller:controller_0|next_state.FETCH1 ; yes                    ;
+; CPU:inst|controller:controller_0|next_state.FETCH2_1191 ; CPU:inst|controller:controller_0|next_state.FETCH1 ; yes                    ;
+; CPU:inst|controller:controller_0|next_state.DECODE_1152 ; CPU:inst|controller:controller_0|next_state.FETCH1 ; yes                    ;
+; CPU:inst|controller:controller_0|next_state.I_OP_918    ; CPU:inst|controller:controller_0|next_state.FETCH1 ; yes                    ;
+; CPU:inst|controller:controller_0|next_state.LOAD2_957   ; CPU:inst|controller:controller_0|next_state.FETCH1 ; yes                    ;
+; CPU:inst|controller:controller_0|next_state.CALL_801    ; CPU:inst|controller:controller_0|next_state.FETCH1 ; yes                    ;
+; CPU:inst|controller:controller_0|next_state.JMP_840     ; CPU:inst|controller:controller_0|next_state.FETCH1 ; yes                    ;
+; CPU:inst|controller:controller_0|next_state.BREAK_1035  ; CPU:inst|controller:controller_0|next_state.FETCH1 ; yes                    ;
+; Number of user-specified and inferred latches = 12      ;                                                    ;                        ;
++---------------------------------------------------------+----------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; CPU:inst|PC:PC_0|s_pc[0,1]            ; Stuck at GND due to stuck port data_in ;
+; buttons:buttons_0|read_reg            ; Lost fanout                            ;
+; Total Number of Removed Registers = 3 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 383   ;
+; Number of registers using Synchronous Clear  ; 8     ;
+; Number of registers using Synchronous Load   ; 14    ;
+; Number of registers using Asynchronous Clear ; 150   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 165   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------+
+; Inverted Register Statistics                                          ;
++-------------------------------------------------------------+---------+
+; Inverted Register                                           ; Fan out ;
++-------------------------------------------------------------+---------+
+; LEDs:LEDs_0|duty_cycle[3]                                   ; 2       ;
+; LEDs:LEDs_0|duty_cycle[2]                                   ; 2       ;
+; LEDs:LEDs_0|duty_cycle[1]                                   ; 2       ;
+; LEDs:LEDs_0|duty_cycle[0]                                   ; 2       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[12] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[18] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[18] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[16] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[16] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[14] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[14] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[12] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[20] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[22] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[24] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[26] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[28] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[30] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[32] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[34] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[36] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[38] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[40] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[42] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[44] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[46] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[48] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[50] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[52] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[54] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[56] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[58] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[60] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[62] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[64] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[66] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[68] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[70] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[72] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[74] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[20] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[42] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[40] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[38] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[36] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[34] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[32] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[30] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[28] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[26] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[24] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[22] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[60] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[58] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[56] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[54] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[52] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[50] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[48] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[46] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[44] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[62] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[64] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[66] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[68] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[70] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[72] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[74] ; 1       ;
+; buttons:buttons_0|buttons_reg[0]                            ; 1       ;
+; buttons:buttons_0|buttons_reg[3]                            ; 1       ;
+; buttons:buttons_0|buttons_reg[2]                            ; 1       ;
+; buttons:buttons_0|buttons_reg[1]                            ; 1       ;
+; Total number of inverted registers = 72                     ;         ;
++-------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Registers Added for RAM Pass-Through Logic                                                                     ;
++-------------------------------------------------------------+--------------------------------------------------+
+; Register Name                                               ; RAM Name                                         ;
++-------------------------------------------------------------+--------------------------------------------------+
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[0]  ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[1]  ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[2]  ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[3]  ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[4]  ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[5]  ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[6]  ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[7]  ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[8]  ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[9]  ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[10] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[11] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[12] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[13] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[14] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[15] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[16] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[17] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[18] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[19] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[20] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[21] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[22] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[23] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[24] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[25] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[26] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[27] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[28] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[29] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[30] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[31] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[32] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[33] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[34] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[35] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[36] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[37] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[38] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[39] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[40] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[41] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[42] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[43] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[44] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[45] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[46] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[47] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[48] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[49] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[50] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[51] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[52] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[53] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[54] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[55] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[56] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[57] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[58] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[59] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[60] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[61] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[62] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[63] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[64] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[65] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[66] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[67] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[68] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[69] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[70] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[71] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[72] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[73] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[74] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[0]  ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[1]  ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[2]  ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[3]  ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[4]  ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[5]  ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[6]  ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[7]  ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[8]  ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[9]  ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[10] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[11] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[12] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[13] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[14] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[15] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[16] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[17] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[18] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[19] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[20] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[21] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[22] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[23] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[24] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[25] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[26] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[27] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[28] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[29] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[30] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[31] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[32] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[33] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[34] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[35] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[36] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[37] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[38] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[39] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[40] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[41] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[42] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[43] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[44] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[45] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[46] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[47] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[48] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[49] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[50] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[51] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[52] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[53] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[54] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[55] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[56] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[57] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[58] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[59] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[60] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[61] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[62] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[63] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[64] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[65] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[66] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[67] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[68] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[69] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[70] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[71] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[72] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[73] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[74] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; RAM:RAM_0|ram_rtl_0_bypass[0]                               ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[1]                               ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[2]                               ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[3]                               ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[4]                               ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[5]                               ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[6]                               ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[7]                               ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[8]                               ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[9]                               ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[10]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[11]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[12]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[13]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[14]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[15]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[16]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[17]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[18]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[19]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[20]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[21]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[22]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[23]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[24]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[25]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[26]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[27]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[28]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[29]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[30]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[31]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[32]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[33]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[34]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[35]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[36]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[37]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[38]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[39]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[40]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[41]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[42]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[43]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[44]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[45]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[46]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[47]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[48]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[49]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[50]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[51]                              ; RAM:RAM_0|ram_rtl_0                              ;
+; RAM:RAM_0|ram_rtl_0_bypass[52]                              ; RAM:RAM_0|ram_rtl_0                              ;
++-------------------------------------------------------------+--------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                           ;
++------------------------------+--------------------------------------------------+------+
+; Register Name                ; Megafunction                                     ; Type ;
++------------------------------+--------------------------------------------------+------+
+; CPU:inst|IR:IR_0|s_Q[27..31] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ; RAM  ;
+; RAM:RAM_0|s_address[0..9]    ; RAM:RAM_0|ram_rtl_0                              ; RAM  ;
++------------------------------+--------------------------------------------------+------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |GECKO|CPU:inst|PC:PC_0|s_pc[2]                          ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |GECKO|CPU:inst|mux2x5:mux_aw|o[0]                       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |GECKO|CPU:inst|mux2x32:mux_data|o[0]                    ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |GECKO|CPU:inst|mux2x32:mux_data|o[15]                   ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; No         ; |GECKO|CPU:inst|controller:controller_0|sel_rC           ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; No         ; |GECKO|CPU:inst|controller:controller_0|write            ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |GECKO|CPU:inst|controller:controller_0|op_alu[1]        ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |GECKO|CPU:inst|controller:controller_0|sel_ra           ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 2 LEs                ; 8 LEs                  ; No         ; |GECKO|CPU:inst|controller:controller_0|next_state.JMP   ;
+; 8:1                ; 24 bits   ; 120 LEs       ; 96 LEs               ; 24 LEs                 ; No         ; |GECKO|rddata[20]                                        ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |GECKO|rddata[6]                                         ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |GECKO|rddata[0]                                         ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; No         ; |GECKO|CPU:inst|controller:controller_0|pc_sel_a         ;
+; 19:1               ; 14 bits   ; 168 LEs       ; 112 LEs              ; 56 LEs                 ; No         ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|o[8] ;
+; 21:1               ; 14 bits   ; 196 LEs       ; 140 LEs              ; 56 LEs                 ; No         ; |GECKO|CPU:inst|mux2x32:mux_data|o[21]                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Source assignments for ROM:ROM_0|ROM_Block:romInst|altsyncram:altsyncram_component|altsyncram_rna1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                  ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                   ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Source assignments for CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0|altsyncram_usi1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                  ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                   ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Source assignments for CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_1|altsyncram_usi1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                  ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                   ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Source assignments for RAM:RAM_0|altsyncram:ram_rtl_0|altsyncram_p4e1:auto_generated ;
++---------------------------------+--------------------+------+------------------------+
+; Assignment                      ; Value              ; From ; To                     ;
++---------------------------------+--------------------+------+------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                      ;
++---------------------------------+--------------------+------+------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ROM:ROM_0|ROM_Block:romInst|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+----------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                         ;
++------------------------------------+----------------------+----------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                      ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                   ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                 ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                 ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                               ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                      ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                      ;
+; WIDTH_A                            ; 32                   ; Signed Integer                               ;
+; WIDTHAD_A                          ; 10                   ; Signed Integer                               ;
+; NUMWORDS_A                         ; 1024                 ; Signed Integer                               ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                      ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                      ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                      ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                      ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                      ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                      ;
+; WIDTH_B                            ; 1                    ; Untyped                                      ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                      ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                      ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                      ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                      ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                      ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                      ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                      ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                      ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                      ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                      ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                      ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                      ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                      ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                      ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                               ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                      ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                      ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                      ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                      ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                      ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                      ;
+; INIT_FILE                          ; ../quartus/ROM.hex   ; Untyped                                      ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                      ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                      ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                      ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                      ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                      ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                      ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                      ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                      ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                      ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                      ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                      ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                      ;
+; CBXI_PARAMETER                     ; altsyncram_rna1      ; Untyped                                      ;
++------------------------------------+----------------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0 ;
++------------------------------------+----------------------------------------------+--------------------------+
+; Parameter Name                     ; Value                                        ; Type                     ;
++------------------------------------+----------------------------------------------+--------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                                            ; Untyped                  ;
+; AUTO_CARRY_CHAINS                  ; ON                                           ; AUTO_CARRY               ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                          ; IGNORE_CARRY             ;
+; AUTO_CASCADE_CHAINS                ; ON                                           ; AUTO_CASCADE             ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                          ; IGNORE_CASCADE           ;
+; WIDTH_BYTEENA                      ; 1                                            ; Untyped                  ;
+; OPERATION_MODE                     ; DUAL_PORT                                    ; Untyped                  ;
+; WIDTH_A                            ; 32                                           ; Untyped                  ;
+; WIDTHAD_A                          ; 5                                            ; Untyped                  ;
+; NUMWORDS_A                         ; 32                                           ; Untyped                  ;
+; OUTDATA_REG_A                      ; UNREGISTERED                                 ; Untyped                  ;
+; ADDRESS_ACLR_A                     ; NONE                                         ; Untyped                  ;
+; OUTDATA_ACLR_A                     ; NONE                                         ; Untyped                  ;
+; WRCONTROL_ACLR_A                   ; NONE                                         ; Untyped                  ;
+; INDATA_ACLR_A                      ; NONE                                         ; Untyped                  ;
+; BYTEENA_ACLR_A                     ; NONE                                         ; Untyped                  ;
+; WIDTH_B                            ; 32                                           ; Untyped                  ;
+; WIDTHAD_B                          ; 5                                            ; Untyped                  ;
+; NUMWORDS_B                         ; 32                                           ; Untyped                  ;
+; INDATA_REG_B                       ; CLOCK1                                       ; Untyped                  ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                       ; Untyped                  ;
+; RDCONTROL_REG_B                    ; CLOCK1                                       ; Untyped                  ;
+; ADDRESS_REG_B                      ; CLOCK0                                       ; Untyped                  ;
+; OUTDATA_REG_B                      ; UNREGISTERED                                 ; Untyped                  ;
+; BYTEENA_REG_B                      ; CLOCK1                                       ; Untyped                  ;
+; INDATA_ACLR_B                      ; NONE                                         ; Untyped                  ;
+; WRCONTROL_ACLR_B                   ; NONE                                         ; Untyped                  ;
+; ADDRESS_ACLR_B                     ; NONE                                         ; Untyped                  ;
+; OUTDATA_ACLR_B                     ; NONE                                         ; Untyped                  ;
+; RDCONTROL_ACLR_B                   ; NONE                                         ; Untyped                  ;
+; BYTEENA_ACLR_B                     ; NONE                                         ; Untyped                  ;
+; WIDTH_BYTEENA_A                    ; 1                                            ; Untyped                  ;
+; WIDTH_BYTEENA_B                    ; 1                                            ; Untyped                  ;
+; RAM_BLOCK_TYPE                     ; AUTO                                         ; Untyped                  ;
+; BYTE_SIZE                          ; 8                                            ; Untyped                  ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                    ; Untyped                  ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                         ; Untyped                  ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                         ; Untyped                  ;
+; INIT_FILE                          ; db/GECKO.ram0_register_file_87c776fc.hdl.mif ; Untyped                  ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                       ; Untyped                  ;
+; MAXIMUM_DEPTH                      ; 0                                            ; Untyped                  ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                       ; Untyped                  ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                       ; Untyped                  ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                       ; Untyped                  ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                       ; Untyped                  ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                              ; Untyped                  ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                              ; Untyped                  ;
+; ENABLE_ECC                         ; FALSE                                        ; Untyped                  ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                        ; Untyped                  ;
+; WIDTH_ECCSTATUS                    ; 3                                            ; Untyped                  ;
+; DEVICE_FAMILY                      ; Cyclone IV E                                 ; Untyped                  ;
+; CBXI_PARAMETER                     ; altsyncram_usi1                              ; Untyped                  ;
++------------------------------------+----------------------------------------------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_1 ;
++------------------------------------+----------------------------------------------+--------------------------+
+; Parameter Name                     ; Value                                        ; Type                     ;
++------------------------------------+----------------------------------------------+--------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                                            ; Untyped                  ;
+; AUTO_CARRY_CHAINS                  ; ON                                           ; AUTO_CARRY               ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                          ; IGNORE_CARRY             ;
+; AUTO_CASCADE_CHAINS                ; ON                                           ; AUTO_CASCADE             ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                          ; IGNORE_CASCADE           ;
+; WIDTH_BYTEENA                      ; 1                                            ; Untyped                  ;
+; OPERATION_MODE                     ; DUAL_PORT                                    ; Untyped                  ;
+; WIDTH_A                            ; 32                                           ; Untyped                  ;
+; WIDTHAD_A                          ; 5                                            ; Untyped                  ;
+; NUMWORDS_A                         ; 32                                           ; Untyped                  ;
+; OUTDATA_REG_A                      ; UNREGISTERED                                 ; Untyped                  ;
+; ADDRESS_ACLR_A                     ; NONE                                         ; Untyped                  ;
+; OUTDATA_ACLR_A                     ; NONE                                         ; Untyped                  ;
+; WRCONTROL_ACLR_A                   ; NONE                                         ; Untyped                  ;
+; INDATA_ACLR_A                      ; NONE                                         ; Untyped                  ;
+; BYTEENA_ACLR_A                     ; NONE                                         ; Untyped                  ;
+; WIDTH_B                            ; 32                                           ; Untyped                  ;
+; WIDTHAD_B                          ; 5                                            ; Untyped                  ;
+; NUMWORDS_B                         ; 32                                           ; Untyped                  ;
+; INDATA_REG_B                       ; CLOCK1                                       ; Untyped                  ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                       ; Untyped                  ;
+; RDCONTROL_REG_B                    ; CLOCK1                                       ; Untyped                  ;
+; ADDRESS_REG_B                      ; CLOCK0                                       ; Untyped                  ;
+; OUTDATA_REG_B                      ; UNREGISTERED                                 ; Untyped                  ;
+; BYTEENA_REG_B                      ; CLOCK1                                       ; Untyped                  ;
+; INDATA_ACLR_B                      ; NONE                                         ; Untyped                  ;
+; WRCONTROL_ACLR_B                   ; NONE                                         ; Untyped                  ;
+; ADDRESS_ACLR_B                     ; NONE                                         ; Untyped                  ;
+; OUTDATA_ACLR_B                     ; NONE                                         ; Untyped                  ;
+; RDCONTROL_ACLR_B                   ; NONE                                         ; Untyped                  ;
+; BYTEENA_ACLR_B                     ; NONE                                         ; Untyped                  ;
+; WIDTH_BYTEENA_A                    ; 1                                            ; Untyped                  ;
+; WIDTH_BYTEENA_B                    ; 1                                            ; Untyped                  ;
+; RAM_BLOCK_TYPE                     ; AUTO                                         ; Untyped                  ;
+; BYTE_SIZE                          ; 8                                            ; Untyped                  ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                    ; Untyped                  ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                         ; Untyped                  ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                         ; Untyped                  ;
+; INIT_FILE                          ; db/GECKO.ram0_register_file_87c776fc.hdl.mif ; Untyped                  ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                       ; Untyped                  ;
+; MAXIMUM_DEPTH                      ; 0                                            ; Untyped                  ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                       ; Untyped                  ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                       ; Untyped                  ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                       ; Untyped                  ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                       ; Untyped                  ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                              ; Untyped                  ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                              ; Untyped                  ;
+; ENABLE_ECC                         ; FALSE                                        ; Untyped                  ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                        ; Untyped                  ;
+; WIDTH_ECCSTATUS                    ; 3                                            ; Untyped                  ;
+; DEVICE_FAMILY                      ; Cyclone IV E                                 ; Untyped                  ;
+; CBXI_PARAMETER                     ; altsyncram_usi1                              ; Untyped                  ;
++------------------------------------+----------------------------------------------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: RAM:RAM_0|altsyncram:ram_rtl_0 ;
++------------------------------------+----------------------+---------------------+
+; Parameter Name                     ; Value                ; Type                ;
++------------------------------------+----------------------+---------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped             ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE      ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped             ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped             ;
+; WIDTH_A                            ; 32                   ; Untyped             ;
+; WIDTHAD_A                          ; 10                   ; Untyped             ;
+; NUMWORDS_A                         ; 1024                 ; Untyped             ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped             ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped             ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped             ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped             ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped             ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped             ;
+; WIDTH_B                            ; 32                   ; Untyped             ;
+; WIDTHAD_B                          ; 10                   ; Untyped             ;
+; NUMWORDS_B                         ; 1024                 ; Untyped             ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped             ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped             ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped             ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped             ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped             ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped             ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped             ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped             ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped             ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped             ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped             ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped             ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped             ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped             ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped             ;
+; BYTE_SIZE                          ; 8                    ; Untyped             ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped             ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped             ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped             ;
+; INIT_FILE                          ; UNUSED               ; Untyped             ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped             ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped             ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped             ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped             ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped             ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped             ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped             ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped             ;
+; ENABLE_ECC                         ; FALSE                ; Untyped             ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped             ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped             ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped             ;
+; CBXI_PARAMETER                     ; altsyncram_p4e1      ; Untyped             ;
++------------------------------------+----------------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                        ;
++-------------------------------------------+-------------------------------------------------------------+
+; Name                                      ; Value                                                       ;
++-------------------------------------------+-------------------------------------------------------------+
+; Number of entity instances                ; 4                                                           ;
+; Entity Instance                           ; ROM:ROM_0|ROM_Block:romInst|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                         ;
+;     -- WIDTH_A                            ; 32                                                          ;
+;     -- NUMWORDS_A                         ; 1024                                                        ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                ;
+;     -- WIDTH_B                            ; 1                                                           ;
+;     -- NUMWORDS_B                         ; 1                                                           ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                      ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                        ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                   ;
+; Entity Instance                           ; CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                                   ;
+;     -- WIDTH_A                            ; 32                                                          ;
+;     -- NUMWORDS_A                         ; 32                                                          ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                ;
+;     -- WIDTH_B                            ; 32                                                          ;
+;     -- NUMWORDS_B                         ; 32                                                          ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                      ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                        ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                   ;
+; Entity Instance                           ; CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_1 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                                   ;
+;     -- WIDTH_A                            ; 32                                                          ;
+;     -- NUMWORDS_A                         ; 32                                                          ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                ;
+;     -- WIDTH_B                            ; 32                                                          ;
+;     -- NUMWORDS_B                         ; 32                                                          ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                      ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                        ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                   ;
+; Entity Instance                           ; RAM:RAM_0|altsyncram:ram_rtl_0                              ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                                   ;
+;     -- WIDTH_A                            ; 32                                                          ;
+;     -- NUMWORDS_A                         ; 1024                                                        ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                ;
+;     -- WIDTH_B                            ; 32                                                          ;
+;     -- NUMWORDS_B                         ; 1024                                                        ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                      ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                        ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                   ;
++-------------------------------------------+-------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 102                         ;
+; cycloneiii_ff         ; 383                         ;
+;     CLR               ; 24                          ;
+;     CLR SCLR          ; 8                           ;
+;     ENA               ; 47                          ;
+;     ENA CLR           ; 104                         ;
+;     ENA CLR SLD       ; 14                          ;
+;     plain             ; 186                         ;
+; cycloneiii_lcell_comb ; 1307                        ;
+;     arith             ; 60                          ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 52                          ;
+;     normal            ; 1247                        ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 142                         ;
+;         3 data inputs ; 367                         ;
+;         4 data inputs ; 727                         ;
+; cycloneiii_ram_block  ; 128                         ;
+;                       ;                             ;
+; Max LUT depth         ; 17.70                       ;
+; Average LUT depth     ; 11.11                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:07     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Wed Oct 21 11:54:33 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GECKO -c GECKO
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file gecko.bdf
+    Info (12023): Found entity 1: GECKO
+Info (12021): Found 1 design units, including 1 entities, in source file alu.bdf
+    Info (12023): Found entity 1: ALU
+Info (12021): Found 1 design units, including 1 entities, in source file cpu.bdf
+    Info (12023): Found entity 1: CPU
+Info (12021): Found 2 design units, including 1 entities, in source file /users/maxime/desktop/epfl/classe/ba3/computer architecture i/projet1/cs-208proj1/graded1/vhdl/add_sub.vhd
+    Info (12022): Found design unit 1: add_sub-synth File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/add_sub.vhd Line: 16
+    Info (12023): Found entity 1: add_sub File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/add_sub.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/maxime/desktop/epfl/classe/ba3/computer architecture i/projet1/cs-208proj1/graded1/vhdl/buttons.vhd
+    Info (12022): Found design unit 1: buttons-synth File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/buttons.vhd Line: 22
+    Info (12023): Found entity 1: buttons File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/buttons.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/maxime/desktop/epfl/classe/ba3/computer architecture i/projet1/cs-208proj1/graded1/vhdl/comparator.vhd
+    Info (12022): Found design unit 1: comparator-synth File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/comparator.vhd Line: 16
+    Info (12023): Found entity 1: comparator File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/comparator.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/maxime/desktop/epfl/classe/ba3/computer architecture i/projet1/cs-208proj1/graded1/vhdl/controller.vhd
+    Info (12022): Found design unit 1: controller-synth File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 39
+    Info (12023): Found entity 1: controller File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/maxime/desktop/epfl/classe/ba3/computer architecture i/projet1/cs-208proj1/graded1/vhdl/decoder.vhd
+    Info (12022): Found design unit 1: decoder-synth File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/decoder.vhd Line: 14
+    Info (12023): Found entity 1: decoder File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/decoder.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/maxime/desktop/epfl/classe/ba3/computer architecture i/projet1/cs-208proj1/graded1/vhdl/extend.vhd
+    Info (12022): Found design unit 1: extend-synth File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/extend.vhd Line: 12
+    Info (12023): Found entity 1: extend File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/extend.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/maxime/desktop/epfl/classe/ba3/computer architecture i/projet1/cs-208proj1/graded1/vhdl/ir.vhd
+    Info (12022): Found design unit 1: IR-synth File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 13
+    Info (12023): Found entity 1: IR File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/maxime/desktop/epfl/classe/ba3/computer architecture i/projet1/cs-208proj1/graded1/vhdl/leds.vhd
+    Info (12022): Found design unit 1: LEDs-synth File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/LEDs.vhd Line: 22
+    Info (12023): Found entity 1: LEDs File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/LEDs.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/maxime/desktop/epfl/classe/ba3/computer architecture i/projet1/cs-208proj1/graded1/vhdl/logic_unit.vhd
+    Info (12022): Found design unit 1: logic_unit-synth File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 13
+    Info (12023): Found entity 1: logic_unit File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/maxime/desktop/epfl/classe/ba3/computer architecture i/projet1/cs-208proj1/graded1/vhdl/multiplexer.vhd
+    Info (12022): Found design unit 1: multiplexer-synth File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/multiplexer.vhd Line: 15
+    Info (12023): Found entity 1: multiplexer File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/multiplexer.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/maxime/desktop/epfl/classe/ba3/computer architecture i/projet1/cs-208proj1/graded1/vhdl/mux2x5.vhd
+    Info (12022): Found design unit 1: mux2x5-synth File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/mux2x5.vhd Line: 13
+    Info (12023): Found entity 1: mux2x5 File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/mux2x5.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/maxime/desktop/epfl/classe/ba3/computer architecture i/projet1/cs-208proj1/graded1/vhdl/mux2x16.vhd
+    Info (12022): Found design unit 1: mux2x16-synth File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/mux2x16.vhd Line: 13
+    Info (12023): Found entity 1: mux2x16 File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/mux2x16.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/maxime/desktop/epfl/classe/ba3/computer architecture i/projet1/cs-208proj1/graded1/vhdl/mux2x32.vhd
+    Info (12022): Found design unit 1: mux2x32-synth File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/mux2x32.vhd Line: 13
+    Info (12023): Found entity 1: mux2x32 File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/mux2x32.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/maxime/desktop/epfl/classe/ba3/computer architecture i/projet1/cs-208proj1/graded1/vhdl/pc.vhd
+    Info (12022): Found design unit 1: PC-synth File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/PC.vhd Line: 19
+    Info (12023): Found entity 1: PC File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/PC.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/maxime/desktop/epfl/classe/ba3/computer architecture i/projet1/cs-208proj1/graded1/vhdl/ram.vhd
+    Info (12022): Found design unit 1: RAM-synth File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/RAM.vhd Line: 16
+    Info (12023): Found entity 1: RAM File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/RAM.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/maxime/desktop/epfl/classe/ba3/computer architecture i/projet1/cs-208proj1/graded1/vhdl/register_file.vhd
+    Info (12022): Found design unit 1: register_file-synth File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/register_file.vhd Line: 18
+    Info (12023): Found entity 1: register_file File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/register_file.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/maxime/desktop/epfl/classe/ba3/computer architecture i/projet1/cs-208proj1/graded1/vhdl/rom.vhd
+    Info (12022): Found design unit 1: ROM-synth File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/ROM.vhd Line: 14
+    Info (12023): Found entity 1: ROM File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/ROM.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/maxime/desktop/epfl/classe/ba3/computer architecture i/projet1/cs-208proj1/graded1/vhdl/rom_block.vhd
+    Info (12022): Found design unit 1: rom_block-SYN File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/ROM_Block.vhd Line: 52
+    Info (12023): Found entity 1: ROM_Block File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/ROM_Block.vhd Line: 42
+Info (12021): Found 2 design units, including 1 entities, in source file /users/maxime/desktop/epfl/classe/ba3/computer architecture i/projet1/cs-208proj1/graded1/vhdl/shift_unit.vhd
+    Info (12022): Found design unit 1: shift_unit-synth File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/shift_unit.vhd Line: 14
+    Info (12023): Found entity 1: shift_unit File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/shift_unit.vhd Line: 5
+Info (12127): Elaborating entity "GECKO" for the top level hierarchy
+Info (12128): Elaborating entity "LEDs" for hierarchy "LEDs:LEDs_0"
+Info (12128): Elaborating entity "decoder" for hierarchy "decoder:decoder_0"
+Info (12128): Elaborating entity "CPU" for hierarchy "CPU:inst"
+Info (12128): Elaborating entity "controller" for hierarchy "CPU:inst|controller:controller_0"
+Warning (10620): VHDL warning at controller.vhd(93): comparison between unequal length operands always returns FALSE File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 93
+Warning (10631): VHDL Process Statement warning at controller.vhd(57): inferring latch(es) for signal or variable "next_state", which holds its previous value in one or more paths through the process File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 57
+Info (10041): Inferred latch for "next_state.CALL" at controller.vhd(57) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 57
+Info (10041): Inferred latch for "next_state.JMP" at controller.vhd(57) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 57
+Info (10041): Inferred latch for "next_state.BRANCH" at controller.vhd(57) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 57
+Info (10041): Inferred latch for "next_state.I_OP" at controller.vhd(57) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 57
+Info (10041): Inferred latch for "next_state.LOAD2" at controller.vhd(57) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 57
+Info (10041): Inferred latch for "next_state.LOAD1" at controller.vhd(57) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 57
+Info (10041): Inferred latch for "next_state.BREAK" at controller.vhd(57) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 57
+Info (10041): Inferred latch for "next_state.STORE" at controller.vhd(57) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 57
+Info (10041): Inferred latch for "next_state.R_OP" at controller.vhd(57) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 57
+Info (10041): Inferred latch for "next_state.DECODE" at controller.vhd(57) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 57
+Info (10041): Inferred latch for "next_state.FETCH2" at controller.vhd(57) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 57
+Info (10041): Inferred latch for "next_state.FETCH1" at controller.vhd(57) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 57
+Info (12128): Elaborating entity "IR" for hierarchy "CPU:inst|IR:IR_0"
+Info (12128): Elaborating entity "mux2x16" for hierarchy "CPU:inst|mux2x16:mux_addr"
+Info (12128): Elaborating entity "PC" for hierarchy "CPU:inst|PC:PC_0"
+Info (12128): Elaborating entity "ALU" for hierarchy "CPU:inst|ALU:alu_0"
+Info (12128): Elaborating entity "multiplexer" for hierarchy "CPU:inst|ALU:alu_0|multiplexer:multiplexer_0"
+Info (12128): Elaborating entity "add_sub" for hierarchy "CPU:inst|ALU:alu_0|add_sub:add_sub_0"
+Info (12128): Elaborating entity "comparator" for hierarchy "CPU:inst|ALU:alu_0|comparator:comparator_0"
+Info (12128): Elaborating entity "logic_unit" for hierarchy "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0"
+Info (10041): Inferred latch for "r[0]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[1]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[2]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[3]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[4]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[5]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[6]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[7]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[8]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[9]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[10]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[11]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[12]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[13]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[14]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[15]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[16]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[17]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[18]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[19]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[20]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[21]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[22]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[23]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[24]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[25]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[26]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[27]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[28]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[29]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[30]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (10041): Inferred latch for "r[31]" at logic_unit.vhd(15) File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Info (12128): Elaborating entity "shift_unit" for hierarchy "CPU:inst|ALU:alu_0|shift_unit:shift_unit_0"
+Info (12128): Elaborating entity "register_file" for hierarchy "CPU:inst|register_file:register_file_0"
+Info (12128): Elaborating entity "mux2x5" for hierarchy "CPU:inst|mux2x5:mux_aw"
+Info (12128): Elaborating entity "mux2x32" for hierarchy "CPU:inst|mux2x32:mux_data"
+Info (12128): Elaborating entity "extend" for hierarchy "CPU:inst|extend:extend_0"
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:ROM_0"
+Warning (10036): Verilog HDL or VHDL warning at ROM.vhd(25): object "s_addr" assigned a value but never read File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/ROM.vhd Line: 25
+Info (12128): Elaborating entity "ROM_Block" for hierarchy "ROM:ROM_0|ROM_Block:romInst" File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/ROM.vhd Line: 42
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM:ROM_0|ROM_Block:romInst|altsyncram:altsyncram_component" File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/ROM_Block.vhd Line: 85
+Info (12130): Elaborated megafunction instantiation "ROM:ROM_0|ROM_Block:romInst|altsyncram:altsyncram_component" File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/ROM_Block.vhd Line: 85
+Info (12133): Instantiated megafunction "ROM:ROM_0|ROM_Block:romInst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/ROM_Block.vhd Line: 85
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "../quartus/ROM.hex"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "1024"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "10"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_rna1.tdf
+    Info (12023): Found entity 1: altsyncram_rna1 File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/quartus/db/altsyncram_rna1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_rna1" for hierarchy "ROM:ROM_0|ROM_Block:romInst|altsyncram:altsyncram_component|altsyncram_rna1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:RAM_0"
+Info (12128): Elaborating entity "buttons" for hierarchy "buttons:buttons_0"
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13048): Converted tri-state node "rddata[31]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[30]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[29]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[28]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[27]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[26]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[25]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[24]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[23]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[22]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[21]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[20]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[19]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[18]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[17]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[16]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[15]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[14]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[13]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[12]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[11]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[10]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[9]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[8]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[7]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[6]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[5]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[4]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[3]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[2]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[1]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[0]" into a selector File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[0]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[1]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[2]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[3]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[4]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[5]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[6]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[7]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[8]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[9]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[10]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[11]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[12]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[13]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[14]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[15]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[16]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[17]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[18]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[19]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[20]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[21]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[22]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[23]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[24]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[25]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[26]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[27]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[28]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[29]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[30]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (14026): LATCH primitive "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0|r[31]" is permanently enabled File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd Line: 15
+Warning (276020): Inferred RAM node "CPU:inst|register_file:register_file_0|reg_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Warning (276020): Inferred RAM node "CPU:inst|register_file:register_file_0|reg_rtl_1" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Warning (276020): Inferred RAM node "RAM:RAM_0|ram_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Info (19000): Inferred 3 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "CPU:inst|register_file:register_file_0|reg_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 5
+        Info (286033): Parameter NUMWORDS_A set to 32
+        Info (286033): Parameter WIDTH_B set to 32
+        Info (286033): Parameter WIDTHAD_B set to 5
+        Info (286033): Parameter NUMWORDS_B set to 32
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/GECKO.ram0_register_file_87c776fc.hdl.mif
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "CPU:inst|register_file:register_file_0|reg_rtl_1" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 5
+        Info (286033): Parameter NUMWORDS_A set to 32
+        Info (286033): Parameter WIDTH_B set to 32
+        Info (286033): Parameter WIDTHAD_B set to 5
+        Info (286033): Parameter NUMWORDS_B set to 32
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/GECKO.ram0_register_file_87c776fc.hdl.mif
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "RAM:RAM_0|ram_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 10
+        Info (286033): Parameter NUMWORDS_A set to 1024
+        Info (286033): Parameter WIDTH_B set to 32
+        Info (286033): Parameter WIDTHAD_B set to 10
+        Info (286033): Parameter NUMWORDS_B set to 1024
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+Info (12130): Elaborated megafunction instantiation "CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0"
+Info (12133): Instantiated megafunction "CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "5"
+    Info (12134): Parameter "NUMWORDS_A" = "32"
+    Info (12134): Parameter "WIDTH_B" = "32"
+    Info (12134): Parameter "WIDTHAD_B" = "5"
+    Info (12134): Parameter "NUMWORDS_B" = "32"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/GECKO.ram0_register_file_87c776fc.hdl.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_usi1.tdf
+    Info (12023): Found entity 1: altsyncram_usi1 File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/quartus/db/altsyncram_usi1.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "RAM:RAM_0|altsyncram:ram_rtl_0"
+Info (12133): Instantiated megafunction "RAM:RAM_0|altsyncram:ram_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "10"
+    Info (12134): Parameter "NUMWORDS_A" = "1024"
+    Info (12134): Parameter "WIDTH_B" = "32"
+    Info (12134): Parameter "WIDTHAD_B" = "10"
+    Info (12134): Parameter "NUMWORDS_B" = "1024"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_p4e1.tdf
+    Info (12023): Found entity 1: altsyncram_p4e1 File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/quartus/db/altsyncram_p4e1.tdf Line: 28
+Warning (13012): Latch CPU:inst|controller:controller_0|next_state.BRANCH_879 has unsafe behavior File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:controller_0|current_state.DECODE File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 41
+Warning (13012): Latch CPU:inst|controller:controller_0|next_state.R_OP_1113 has unsafe behavior File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:controller_0|current_state.DECODE File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 41
+Warning (13012): Latch CPU:inst|controller:controller_0|next_state.STORE_1074 has unsafe behavior File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|IR:IR_0|s_Q[0] File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+Warning (13012): Latch CPU:inst|controller:controller_0|next_state.LOAD1_996 has unsafe behavior File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|IR:IR_0|s_Q[0] File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd Line: 19
+Warning (13012): Latch CPU:inst|controller:controller_0|next_state.FETCH1_1230 has unsafe behavior File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:controller_0|current_state.DECODE File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 41
+Warning (13012): Latch CPU:inst|controller:controller_0|next_state.I_OP_918 has unsafe behavior File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:controller_0|current_state.DECODE File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 41
+Warning (13012): Latch CPU:inst|controller:controller_0|next_state.CALL_801 has unsafe behavior File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:controller_0|current_state.DECODE File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 41
+Warning (13012): Latch CPU:inst|controller:controller_0|next_state.JMP_840 has unsafe behavior File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:controller_0|current_state.DECODE File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 41
+Warning (13012): Latch CPU:inst|controller:controller_0|next_state.BREAK_1035 has unsafe behavior File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:controller_0|current_state.DECODE File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/controller.vhd Line: 41
+Info (13000): Registers with preset signals will power-up high File: C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/LEDs.vhd Line: 90
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1883 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 96 output pins
+    Info (21061): Implemented 1653 logic cells
+    Info (21064): Implemented 128 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 90 warnings
+    Info: Peak virtual memory: 4803 megabytes
+    Info: Processing ended: Wed Oct 21 11:54:56 2020
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:41
+
+

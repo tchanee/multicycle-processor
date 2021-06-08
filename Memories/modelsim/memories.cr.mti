@@ -1,0 +1,110 @@
+/home/student/Desktop/ba3/CS-208Proj1/Memories/vhdl/ROM_Block.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/student/Desktop/ba3/CS-208Proj1/Memories/vhdl/ROM_Block.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ROM_Block
+-- Compiling architecture SYN of rom_block
+
+} {} {}} /home/student/Desktop/ba3/CS-208Proj1/Memories/testbench/tb_memories.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/student/Desktop/ba3/CS-208Proj1/Memories/testbench/tb_memories.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity tb_memories
+-- Compiling architecture testbench of tb_memories
+-- Loading entity FPGA4U_WITHOUT_CONTROLLER
+
+} {} {}} /home/student/Desktop/ba3/CS-208Proj1/Memories/testbench/tb_register_file.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/student/Desktop/ba3/CS-208Proj1/Memories/testbench/tb_register_file.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity tb_register_file
+-- Compiling architecture bench of tb_register_file
+
+} {} {}} /home/student/Desktop/ba3/CS-208Proj1/Memories/vhdl/Controller.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/student/Desktop/ba3/CS-208Proj1/Memories/vhdl/Controller.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity controller
+-- Compiling architecture synth of controller
+
+} {} {}} /home/student/Desktop/ba3/CS-208Proj1/Memories/vhdl/register_file.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/student/Desktop/ba3/CS-208Proj1/Memories/vhdl/register_file.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity register_file
+-- Compiling architecture synth of register_file
+
+} {} {}} /home/student/Desktop/ba3/CS-208Proj1/Memories/vhdl/ROM.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/student/Desktop/ba3/CS-208Proj1/Memories/vhdl/ROM.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ROM
+-- Compiling architecture synth of ROM
+
+} {} {}} /home/student/Desktop/ba3/CS-208Proj1/Memories/vhdl/RAM.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/student/Desktop/ba3/CS-208Proj1/Memories/vhdl/RAM.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RAM
+-- Compiling architecture synth of RAM
+
+} {} {}} /home/student/Desktop/ba3/CS-208Proj1/Memories/vhdl/LEDs.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/student/Desktop/ba3/CS-208Proj1/Memories/vhdl/LEDs.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity LEDs
+-- Compiling architecture synth of LEDs
+
+} {} {}} /home/student/Desktop/ba3/CS-208Proj1/Memories/vhdl/FPGA4U_without_controller.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/student/Desktop/ba3/CS-208Proj1/Memories/vhdl/FPGA4U_without_controller.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity FPGA4U_WITHOUT_CONTROLLER
+-- Compiling architecture bdf_type of FPGA4U_WITHOUT_CONTROLLER
+
+} {} {}} /home/student/Desktop/ba3/CS-208Proj1/Memories/vhdl/FPGA4U_with_controller.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/student/Desktop/ba3/CS-208Proj1/Memories/vhdl/FPGA4U_with_controller.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity FPGA4U_WITH_CONTROLLER
+-- Compiling architecture bdf_type of FPGA4U_WITH_CONTROLLER
+
+} {} {}} /home/student/Desktop/ba3/CS-208Proj1/Memories/vhdl/rgb_led96.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/student/Desktop/ba3/CS-208Proj1/Memories/vhdl/rgb_led96.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling package pack
+-- Compiling package body pack
+-- Loading package pack
+-- Loading package pack
+-- Compiling entity rgb_led96
+-- Compiling architecture arch of rgb_led96
+
+} {} {}} /home/student/Desktop/ba3/CS-208Proj1/Memories/vhdl/decoder.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/student/Desktop/ba3/CS-208Proj1/Memories/vhdl/decoder.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity decoder
+-- Compiling architecture synth of decoder
+
+} {} {}}

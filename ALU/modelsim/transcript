@@ -1,0 +1,209 @@
+# Loading project alu
+vsim work.tb_alu
+# vsim work.tb_alu 
+# Start time: 20:13:49 on Sep 23,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_alu(bench)
+# Loading work.alu(bdf_type)
+# Loading work.add_sub(fast)
+# Loading work.comparator(fast)
+# Loading work.logic_unit(fast)
+# Loading work.multiplexer(fast)
+# Loading work.shift_unit(fast)
+add wave -position insertpoint sim:/tb_alu/*
+add wave -position insertpoint sim:/tb_alu/alu_0/b2v_add_sub_0/*
+set a 0000000000000000000000000000000000
+# 0000000000000000000000000000000000
+set a 00000000000000000000000000000000
+# 00000000000000000000000000000000
+set b 00000000000000000000000000000000
+# 00000000000000000000000000000000
+run 4
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /tb_alu/alu_0/b2v_add_sub_0
+run 400
+force b 00000000000000000000000000000000
+# ** Warning: (vsim-8780) Forcing /tb_alu/b as root of /tb_alu/alu_0/b2v_add_sub_0/b specified in the force.
+force a 00000000000000000000000000000000
+# ** Warning: (vsim-8780) Forcing /tb_alu/a as root of /tb_alu/alu_0/b2v_add_sub_0/a specified in the force.
+run 400
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 404 ps  Iteration: 1  Instance: /tb_alu/alu_0/b2v_add_sub_0
+force a "00000000000000000000000000000000"
+# ** Warning: (vsim-8780) Forcing /tb_alu/a as root of /tb_alu/alu_0/b2v_add_sub_0/a specified in the force.
+reset -f
+# /usr/bin/reset: invalid option -- 'f'
+# Usage: tset [options] [terminal]
+# 
+# Options:
+#   -c          set control characters
+#   -e ch       erase character
+#   -I          no initialization strings
+#   -i ch       interrupt character
+#   -k ch       kill character
+#   -m mapping  map identifier to type
+#   -Q          do not output control key settings
+#   -q          display term only, do no changes
+#   -r          display term on stderr
+#   -s          output TERM set command
+#   -V          print curses-version
+#   -w          set window-size
+# 
+# If neither -c/-w are given, both are assumed.
+restart -f
+force a 00000000000000000000000000000000
+force b 00000000000000000000000000000000
+run 40
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /tb_alu/alu_0/b2v_add_sub_0
+restart -f
+run -all
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /tb_alu/alu_0/b2v_add_sub_0
+# ** Note: = Add/Sub test ===============================================================
+#    Time: 40 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: = Comparator test ============================================================
+#    Time: 327720 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: = Logical unit test ==========================================================
+#    Time: 655400 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: = Shift unit test ============================================================
+#    Time: 983080 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: = Test is Successful!!! ======================================================
+#    Time: 1310760 ns  Iteration: 0  Instance: /tb_alu
+# Compile of tb_logic_unit.vhd was successful.
+# Compile of tb_ALU.vhd was successful.
+# Compile of shift_unit.vhd was successful.
+# Compile of add_sub.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of logic_unit.vhd was successful.
+# Compile of multiplexer.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+restart -f
+# Loading work.tb_alu(bench)
+# Loading work.alu(bdf_type)
+# Loading work.add_sub(fast)
+# Loading work.comparator(fast)
+# Loading work.logic_unit(fast)
+# Loading work.multiplexer(fast)
+# Loading work.shift_unit(fast)
+run -all
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /tb_alu/alu_0/b2v_add_sub_0
+# ** Note: = Add/Sub test ===============================================================
+#    Time: 40 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: = Comparator test ============================================================
+#    Time: 327720 ns  Iteration: 0  Instance: /tb_alu
+# ** Error: Incorrect Behavior
+#    Time: 512080 ns  Iteration: 0  Instance: /tb_alu
+# Compile of tb_logic_unit.vhd was successful.
+# Compile of tb_ALU.vhd was successful.
+# Compile of shift_unit.vhd was successful.
+# Compile of add_sub.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of logic_unit.vhd was successful.
+# Compile of multiplexer.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+restart -f
+# Loading work.tb_alu(bench)
+# Loading work.alu(bdf_type)
+# Loading work.add_sub(fast)
+# Loading work.comparator(fast)
+# Loading work.logic_unit(fast)
+# Loading work.multiplexer(fast)
+# Loading work.shift_unit(fast)
+run -all
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /tb_alu/alu_0/b2v_add_sub_0
+# ** Note: = Add/Sub test ===============================================================
+#    Time: 40 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: = Comparator test ============================================================
+#    Time: 327720 ns  Iteration: 0  Instance: /tb_alu
+# ** Error: Incorrect Behavior
+#    Time: 491600 ns  Iteration: 0  Instance: /tb_alu
+# Compile of tb_logic_unit.vhd was successful.
+# Compile of tb_ALU.vhd was successful.
+# Compile of shift_unit.vhd was successful.
+# Compile of add_sub.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of logic_unit.vhd was successful.
+# Compile of multiplexer.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+restart -f
+# Loading work.tb_alu(bench)
+# Loading work.alu(bdf_type)
+# Loading work.add_sub(fast)
+# Loading work.comparator(fast)
+# Loading work.logic_unit(fast)
+# Loading work.multiplexer(fast)
+# Loading work.shift_unit(fast)
+run -all
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /tb_alu/alu_0/b2v_add_sub_0
+# ** Note: = Add/Sub test ===============================================================
+#    Time: 40 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: = Comparator test ============================================================
+#    Time: 327720 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: = Logical unit test ==========================================================
+#    Time: 655400 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: = Shift unit test ============================================================
+#    Time: 983080 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: = Test is Successful!!! ======================================================
+#    Time: 1310760 ns  Iteration: 0  Instance: /tb_alu
+restart -f
+run -all
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /tb_alu/alu_0/b2v_add_sub_0
+# ** Note: = Add/Sub test ===============================================================
+#    Time: 40 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: = Comparator test ============================================================
+#    Time: 327720 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: = Logical unit test ==========================================================
+#    Time: 655400 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: = Shift unit test ============================================================
+#    Time: 983080 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: = Test is Successful!!! ======================================================
+#    Time: 1310760 ns  Iteration: 0  Instance: /tb_alu
+# Compile of tb_logic_unit.vhd was successful.
+# Compile of tb_ALU.vhd was successful.
+# Compile of shift_unit.vhd was successful.
+# Compile of add_sub.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of logic_unit.vhd was successful.
+# Compile of multiplexer.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+restart -f
+# Loading work.tb_alu(bench)
+# Loading work.alu(bdf_type)
+# Loading work.add_sub(fast)
+# Loading work.comparator(fast)
+# Loading work.logic_unit(fast)
+# Loading work.multiplexer(fast)
+# Loading work.shift_unit(fast)
+run -all
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /tb_alu/alu_0/b2v_add_sub_0
+# ** Note: = Add/Sub test ===============================================================
+#    Time: 40 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: = Comparator test ============================================================
+#    Time: 327720 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: = Logical unit test ==========================================================
+#    Time: 655400 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: = Shift unit test ============================================================
+#    Time: 983080 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: = Test is Successful!!! ======================================================
+#    Time: 1310760 ns  Iteration: 0  Instance: /tb_alu

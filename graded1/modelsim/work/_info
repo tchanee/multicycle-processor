@@ -1,0 +1,1195 @@
+m255
+K4
+z2
+!s11e MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/HP PC/Google Drive/Teaching/ArchOrd Mirjana/3-multicycle_niosII-workinprogress/project_template/modelsim
+Eadd_sub
+Z0 w1600886313
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 2458
+Z4 dC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/modelsim
+Z5 8C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/add_sub.vhd
+Z6 FC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/add_sub.vhd
+l0
+L5 1
+V207_zj^V^3XmVFBkYPT0^3
+!s100 Ho^oT``GLJUNf<W@=D9Un1
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1603274010
+!i10b 1
+Z9 !s108 1603274010.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/add_sub.vhd|
+Z11 !s107 C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/add_sub.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Asynth
+R1
+R2
+R3
+DEx4 work 7 add_sub 0 22 207_zj^V^3XmVFBkYPT0^3
+!i122 2458
+l20
+L16 19
+VP9]HDU0=gZ9_?<7XN4eL=3
+!s100 XMTc6WJmmneah<PZ?cmHV0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ealu
+Z14 w1600841559
+R2
+R3
+!i122 2459
+R4
+Z15 8C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/ALU.vhd
+Z16 FC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/ALU.vhd
+l0
+Z17 L24 1
+VLIV0?b]kCZ40<iPbTC=4:2
+!s100 O`l`Xc5c_V9`dzon<W_fQ2
+R7
+32
+Z18 !s110 1603274011
+!i10b 1
+R9
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/ALU.vhd|
+Z20 !s107 C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/ALU.vhd|
+!i113 1
+R12
+R13
+Abdf_type
+R2
+R3
+DEx4 work 3 alu 0 22 LIV0?b]kCZ40<iPbTC=4:2
+!i122 2459
+l91
+L34 106
+Vn7Jhlm<g3=Igo4gAY0?Z=3
+!s100 ao^@A8=RSg[FW?jY:[EXI0
+R7
+32
+R18
+!i10b 1
+R9
+R19
+R20
+!i113 1
+R12
+R13
+Ebuttons
+Z21 w1602050697
+R1
+R2
+R3
+!i122 2442
+R4
+Z22 8C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/buttons.vhd
+Z23 FC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/buttons.vhd
+l0
+L5 1
+V6nKA>6XmzI`j>a@n4^6Pn2
+!s100 =22bV77NIHzbkEY31]2hQ2
+R7
+32
+Z24 !s110 1603274000
+!i10b 1
+Z25 !s108 1603274000.000000
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/buttons.vhd|
+Z27 !s107 C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/buttons.vhd|
+!i113 1
+R12
+R13
+Asynth
+R1
+R2
+R3
+DEx4 work 7 buttons 0 22 6nKA>6XmzI`j>a@n4^6Pn2
+!i122 2442
+l31
+L22 60
+Vz=5DD3`[2T_e1Tj`RUBgR3
+!s100 l:Q7JXKFoP5Z9FQDUXG9]3
+R7
+32
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R12
+R13
+Pcheck_functions
+Z28 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
+R2
+R3
+!i122 2471
+R21
+R4
+Z29 8../testbench/check_functions.vhd
+Z30 F../testbench/check_functions.vhd
+l0
+L6 1
+V6aLKC8M`WFbUTzDPW6He83
+!s100 eDnLHELO`V5ohl=5KQY@20
+R7
+31
+b1
+Z31 !s110 1603274053
+!i10b 1
+Z32 !s108 1603274052.000000
+Z33 !s90 -reportprogress|300|-93|../testbench/check_functions.vhd|
+Z34 !s107 ../testbench/check_functions.vhd|
+!i113 1
+o-93
+R13
+Bbody
+Z35 DPx4 work 15 check_functions 0 22 6aLKC8M`WFbUTzDPW6He83
+R28
+R2
+R3
+!i122 2471
+l0
+L40 1
+Vl_?7YlfeIC=0oLhh:^F<e2
+!s100 ]Ul<gd[SNh_SV]VQVO[::0
+R7
+31
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 1
+o-93
+R13
+Ecomparator
+Z36 w1600854622
+R2
+R3
+!i122 2460
+R4
+Z37 8C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/comparator.vhd
+Z38 FC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/comparator.vhd
+l0
+L4 1
+V3WXakLjKGIMC9fTC_zAJG3
+!s100 XTWoF>RX1>LcmLLBBo;N:0
+R7
+32
+R18
+!i10b 1
+Z39 !s108 1603274011.000000
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/comparator.vhd|
+Z41 !s107 C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/comparator.vhd|
+!i113 1
+R12
+R13
+Asynth
+R2
+R3
+DEx4 work 10 comparator 0 22 3WXakLjKGIMC9fTC_zAJG3
+!i122 2460
+l17
+L16 11
+V:U6fO7W0@mLUK^CGb1?z]3
+!s100 d<ZanLX3R1@BBE0S8YI5n2
+R7
+32
+R18
+!i10b 1
+R39
+R40
+R41
+!i113 1
+R12
+R13
+Econtroller
+Z42 w1603270207
+R2
+R3
+!i122 2470
+R4
+Z43 8../vhdl/controller.vhd
+Z44 F../vhdl/controller.vhd
+l0
+L4 1
+V>:mGA0fg1bnEUkAc9L0EZ3
+!s100 iLCb?>B5ja1L5iDVmAU]]0
+R7
+31
+Z45 !s110 1603274052
+!i10b 1
+R32
+Z46 !s90 -reportprogress|300|-93|../vhdl/controller.vhd|
+Z47 !s107 ../vhdl/controller.vhd|
+!i113 1
+o-93
+R13
+Asynth
+R2
+R3
+DEx4 work 10 controller 0 22 >:mGA0fg1bnEUkAc9L0EZ3
+!i122 2470
+l44
+L39 166
+VEPn31C;^mZI]Y6EnRh48F1
+!s100 Iz?bKd=_JgenLVBEnWI083
+R7
+31
+R45
+!i10b 1
+R32
+R46
+R47
+!i113 1
+o-93
+R13
+Ecpu
+R21
+R2
+R3
+!i122 2444
+R4
+Z48 8C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/CPU.vhd
+Z49 FC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/CPU.vhd
+l0
+R17
+VoN1Z@H62cOJ8j76FSZXfk0
+!s100 ?^3E^YkUK_jO8j=PLQg0X0
+R7
+32
+Z50 !s110 1603274002
+!i10b 1
+Z51 !s108 1603274001.000000
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/CPU.vhd|
+Z53 !s107 C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/CPU.vhd|
+!i113 1
+R12
+R13
+Abdf_type
+R2
+R3
+DEx4 work 3 cpu 0 22 oN1Z@H62cOJ8j76FSZXfk0
+!i122 2444
+l168
+L37 257
+VU_VbP>G_0>o[AHnGEJ`7A2
+!s100 nj]fOeJzKgV2QQoiYJ37e2
+R7
+32
+R50
+!i10b 1
+R51
+R52
+R53
+!i113 1
+R12
+R13
+Edecoder
+Z54 w1602052202
+R2
+R3
+!i122 2461
+R4
+Z55 8C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/decoder.vhd
+Z56 FC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/decoder.vhd
+l0
+L4 1
+VSg<AcAL[fZ1zMI?UhfBNi0
+!s100 jK;jV5kd1ZOaK]FLU5e2@3
+R7
+32
+Z57 !s110 1603274012
+!i10b 1
+R39
+Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/decoder.vhd|
+Z59 !s107 C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/decoder.vhd|
+!i113 1
+R12
+R13
+Asynth
+R2
+R3
+DEx4 work 7 decoder 0 22 Sg<AcAL[fZ1zMI?UhfBNi0
+!i122 2461
+l16
+L14 17
+V[Jg=_O>Z35OS9<PhjZ5V70
+!s100 R3jD1FV_[eMhGX@B`h1Qg2
+R7
+32
+R57
+!i10b 1
+R39
+R58
+R59
+!i113 1
+R12
+R13
+Eextend
+Z60 w1602052968
+R2
+R3
+!i122 2445
+R4
+Z61 8C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/extend.vhd
+Z62 FC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/extend.vhd
+l0
+L4 1
+VUL_6DHeRdI@k7FglXE4m:2
+!s100 [OER<nle^Gzi[Q]KGKSL33
+R7
+32
+R50
+!i10b 1
+Z63 !s108 1603274002.000000
+Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/extend.vhd|
+Z65 !s107 C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/extend.vhd|
+!i113 1
+R12
+R13
+Asynth
+R2
+R3
+DEx4 work 6 extend 0 22 UL_6DHeRdI@k7FglXE4m:2
+!i122 2445
+l14
+L12 9
+VIPi394:=]?VXLcMF`hoi43
+!s100 GSK@9C`GO7BQVG0;;;kc42
+R7
+32
+R50
+!i10b 1
+R63
+R64
+R65
+!i113 1
+R12
+R13
+Egecko
+R21
+R2
+R3
+!i122 2446
+R4
+Z66 8C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/GECKO.vhd
+Z67 FC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/GECKO.vhd
+l0
+L25 1
+VUUo[=d8;JL2NUd?KL5z>W3
+!s100 LSB69=RnS?7B=e740[]>J0
+R7
+32
+Z68 !s110 1603274003
+!i10b 1
+R63
+Z69 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/GECKO.vhd|
+Z70 !s107 C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/GECKO.vhd|
+!i113 1
+R12
+R13
+Abdf_type
+R2
+R3
+Z71 DEx4 work 5 gecko 0 22 UUo[=d8;JL2NUd?KL5z>W3
+!i122 2446
+l122
+L42 153
+VXW8hfda?:0fgXTELaMc<M2
+!s100 6_aIkK46>FzI3D:<OBG:Z1
+R7
+32
+R68
+!i10b 1
+R63
+R69
+R70
+!i113 1
+R12
+R13
+Eir
+Z72 w1602782382
+R2
+R3
+!i122 2447
+R4
+Z73 8C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd
+Z74 FC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd
+l0
+L4 1
+V^D0Sz[@@D76hLF6hc_Qm`1
+!s100 g>VC3<ZiU9SUL1eB^Hc9_3
+R7
+32
+Z75 !s110 1603274004
+!i10b 1
+Z76 !s108 1603274003.000000
+Z77 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd|
+Z78 !s107 C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/IR.vhd|
+!i113 1
+R12
+R13
+Asynth
+R2
+R3
+DEx4 work 2 ir 0 22 ^D0Sz[@@D76hLF6hc_Qm`1
+!i122 2447
+l15
+L13 14
+VDg@RWM2C2SY0LzCUQUQ1c0
+!s100 YWo[@lCLdM75MH<QzU4Uo2
+R7
+32
+R75
+!i10b 1
+R76
+R77
+R78
+!i113 1
+R12
+R13
+Eleds
+R21
+R1
+R2
+R3
+!i122 2462
+R4
+Z79 8C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/LEDs.vhd
+Z80 FC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/LEDs.vhd
+l0
+L5 1
+V82^IRfHNag^>;Yc>Z[nm>3
+!s100 LBhnQz<diU;5h1EbFfFEW1
+R7
+32
+Z81 !s110 1603274013
+!i10b 1
+Z82 !s108 1603274012.000000
+Z83 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/LEDs.vhd|
+Z84 !s107 C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/LEDs.vhd|
+!i113 1
+R12
+R13
+Asynth
+R1
+R2
+R3
+DEx4 work 4 leds 0 22 82^IRfHNag^>;Yc>Z[nm>3
+!i122 2462
+l35
+L22 85
+V>3f<EDDzh?fl>Y0i[ad233
+!s100 >nX>UXM`h;^[mnM>habSd1
+R7
+32
+R81
+!i10b 1
+R82
+R83
+R84
+!i113 1
+R12
+R13
+Elogic_unit
+Z85 w1600843360
+R2
+R3
+!i122 2463
+R4
+Z86 8C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd
+Z87 FC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd
+l0
+L4 1
+VfUEL39DQfcR_XLk:Hoe<f3
+!s100 UJioXKUg8XUULGTSe2WE20
+R7
+32
+R81
+!i10b 1
+Z88 !s108 1603274013.000000
+Z89 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd|
+Z90 !s107 C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/logic_unit.vhd|
+!i113 1
+R12
+R13
+Asynth
+R2
+R3
+DEx4 work 10 logic_unit 0 22 fUEL39DQfcR_XLk:Hoe<f3
+!i122 2463
+l14
+L13 7
+Vz]QAiLGKo:nFOg>[Xh[E<0
+!s100 0T09aVIZ1RI6zL_1z5?;b3
+R7
+32
+R81
+!i10b 1
+R88
+R89
+R90
+!i113 1
+R12
+R13
+Emultiplexer
+Z91 w1600848343
+R2
+R3
+!i122 2464
+R4
+Z92 8C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/multiplexer.vhd
+Z93 FC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/multiplexer.vhd
+l0
+L4 1
+V4iH6`nZgBAHVia??bJk>G2
+!s100 UDM^5ga=kb9Z[=K^]bghV0
+R7
+32
+Z94 !s110 1603274014
+!i10b 1
+R88
+Z95 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/multiplexer.vhd|
+Z96 !s107 C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/multiplexer.vhd|
+!i113 1
+R12
+R13
+Asynth
+R2
+R3
+DEx4 work 11 multiplexer 0 22 4iH6`nZgBAHVia??bJk>G2
+!i122 2464
+l16
+L15 9
+Va`<Q0NgZ[JR0Se44Vn=Lk1
+!s100 7ec]Hjh][VGoZZLQ_>J`V3
+R7
+32
+R94
+!i10b 1
+R88
+R95
+R96
+!i113 1
+R12
+R13
+Emux2x16
+Z97 w1602052988
+R2
+R3
+!i122 2449
+R4
+Z98 8C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/mux2x16.vhd
+Z99 FC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/mux2x16.vhd
+l0
+L4 1
+VaHOL`3MF?g?d`[6<SJm^e1
+!s100 ]AkMHg3_OS9:k6cjVd[b:3
+R7
+32
+Z100 !s110 1603274005
+!i10b 1
+Z101 !s108 1603274004.000000
+Z102 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/mux2x16.vhd|
+Z103 !s107 C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/mux2x16.vhd|
+!i113 1
+R12
+R13
+Asynth
+R2
+R3
+DEx4 work 7 mux2x16 0 22 aHOL`3MF?g?d`[6<SJm^e1
+!i122 2449
+l14
+Z104 L13 6
+V8:@IM1VDho40lF=85fM8K2
+!s100 IZcXThd?HI:jU<W;KBebG1
+R7
+32
+R100
+!i10b 1
+R101
+R102
+R103
+!i113 1
+R12
+R13
+Emux2x32
+Z105 w1602060697
+R2
+R3
+!i122 2450
+R4
+Z106 8C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/mux2x32.vhd
+Z107 FC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/mux2x32.vhd
+l0
+L4 1
+V5<9;E?13m3J1aF01KEAAR1
+!s100 Iab^5l@hZCaSi22IEjFiN0
+R7
+32
+R100
+!i10b 1
+Z108 !s108 1603274005.000000
+Z109 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/mux2x32.vhd|
+Z110 !s107 C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/mux2x32.vhd|
+!i113 1
+R12
+R13
+Asynth
+R2
+R3
+DEx4 work 7 mux2x32 0 22 5<9;E?13m3J1aF01KEAAR1
+!i122 2450
+l14
+R104
+Vha9lj?Y_W4aW>:DRLJQc^0
+!s100 @YjngcgCk6cHJHCJQJgAa0
+R7
+32
+R100
+!i10b 1
+R108
+R109
+R110
+!i113 1
+R12
+R13
+Emux2x5
+Z111 w1602052477
+R2
+R3
+!i122 2448
+R4
+Z112 8C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/mux2x5.vhd
+Z113 FC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/mux2x5.vhd
+l0
+L4 1
+VW@GMgb]B=<MlVOlGRRM2i3
+!s100 A96?gLbg3Wafg>1JToSDm3
+R7
+32
+R75
+!i10b 1
+R101
+Z114 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/mux2x5.vhd|
+Z115 !s107 C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/mux2x5.vhd|
+!i113 1
+R12
+R13
+Asynth
+R2
+R3
+DEx4 work 6 mux2x5 0 22 W@GMgb]B=<MlVOlGRRM2i3
+!i122 2448
+l14
+R104
+VdRBDf77]G39YzUL`IzZ?B3
+!s100 lbiBU4PiiEg0d[ed^T[K13
+R7
+32
+R75
+!i10b 1
+R101
+R114
+R115
+!i113 1
+R12
+R13
+Epc
+Z116 w1602951600
+R1
+R2
+R3
+!i122 2451
+R4
+Z117 8C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/PC.vhd
+Z118 FC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/PC.vhd
+l0
+L5 1
+VL1PS=`^7Dom5JHh`oiS8z0
+!s100 Vz;DIYb[AY;g5[laVME<e3
+R7
+32
+Z119 !s110 1603274006
+!i10b 1
+R108
+Z120 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/PC.vhd|
+Z121 !s107 C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/PC.vhd|
+!i113 1
+R12
+R13
+Asynth
+R1
+R2
+R3
+DEx4 work 2 pc 0 22 L1PS=`^7Dom5JHh`oiS8z0
+!i122 2451
+l22
+L19 33
+VlQk0i_JbVKYS8lJfj5>dJ0
+!s100 kBM^_hBl2VE`TLjaiU;DH1
+R7
+32
+R119
+!i10b 1
+R108
+R120
+R121
+!i113 1
+R12
+R13
+Eram
+Z122 w1601458612
+R1
+R2
+R3
+!i122 2465
+R4
+Z123 8C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/RAM.vhd
+Z124 FC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/RAM.vhd
+l0
+L5 1
+VJiWAmLGUWmdVPB8L2QZ[D3
+!s100 9O>00CFElD4PLMkihiTWm3
+R7
+32
+R94
+!i10b 1
+Z125 !s108 1603274014.000000
+Z126 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/RAM.vhd|
+Z127 !s107 C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/RAM.vhd|
+!i113 1
+R12
+R13
+Asynth
+R1
+R2
+R3
+DEx4 work 3 ram 0 22 JiWAmLGUWmdVPB8L2QZ[D3
+!i122 2465
+l23
+L16 29
+Vz;kFPOkZKXZE7N1iLEL?O3
+!s100 ZNZcZcb1HMefOA::j:g`N1
+R7
+32
+R94
+!i10b 1
+R125
+R126
+R127
+!i113 1
+R12
+R13
+Eregister_file
+Z128 w1601451258
+R1
+R2
+R3
+!i122 2466
+R4
+Z129 8C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/register_file.vhd
+Z130 FC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/register_file.vhd
+l0
+L5 1
+VhQYRZ<6ijZW2:hk46k4IZ2
+!s100 _;mToXbZzY:WVO^oMIJ;J3
+R7
+32
+Z131 !s110 1603274015
+!i10b 1
+Z132 !s108 1603274015.000000
+Z133 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/register_file.vhd|
+Z134 !s107 C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/register_file.vhd|
+!i113 1
+R12
+R13
+Asynth
+R1
+R2
+R3
+DEx4 work 13 register_file 0 22 hQYRZ<6ijZW2:hk46k4IZ2
+!i122 2466
+l24
+L18 21
+VaWOD;PheZglz0:RBheCY61
+!s100 V8Ozcz^zmQznNJon2R@b82
+R7
+32
+R131
+!i10b 1
+R132
+R133
+R134
+!i113 1
+R12
+R13
+Erom
+Z135 w1603273995
+R2
+R3
+!i122 2467
+R4
+Z136 8C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/ROM.vhd
+Z137 FC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/ROM.vhd
+l0
+L4 1
+VLD>LKJh0<<KfR_G::f?6B1
+!s100 LzhnA0@bLeKPHkcXf<L3g3
+R7
+32
+Z138 !s110 1603274016
+!i10b 1
+R132
+Z139 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/ROM.vhd|
+Z140 !s107 C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/ROM.vhd|
+!i113 1
+R12
+R13
+Asynth
+R2
+R3
+DEx4 work 3 rom 0 22 LD>LKJh0<<KfR_G::f?6B1
+!i122 2467
+l28
+L14 37
+VG`QgYah@39=9j?FF]dkLG0
+!s100 2SPEVnBXNR<28BZDIE=E82
+R7
+32
+R138
+!i10b 1
+R132
+R139
+R140
+!i113 1
+R12
+R13
+Erom_block
+Z141 w1602666432
+R2
+R3
+!i122 2468
+R4
+Z142 8C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/ROM_Block.vhd
+Z143 FC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/ROM_Block.vhd
+l0
+L42 1
+VCf[gZ]hQBZigaT1P:e9O01
+!s100 Fb1^C3b1G3KcM]0dFoPHV2
+R7
+32
+R138
+!i10b 1
+Z144 !s108 1603274016.000000
+Z145 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/ROM_Block.vhd|
+Z146 !s107 C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/ROM_Block.vhd|
+!i113 1
+R12
+R13
+Asyn
+R2
+R3
+DEx4 work 9 rom_block 0 22 Cf[gZ]hQBZigaT1P:e9O01
+!i122 2468
+l82
+L52 59
+VZKBR7P0EaE;PJMf_Ho4411
+!s100 2O9W8o5<`cI7Pb0TBCEoL0
+R7
+32
+R138
+!i10b 1
+R144
+R145
+R146
+!i113 1
+R12
+R13
+Eshift_unit
+Z147 w1600857962
+R1
+R2
+R3
+!i122 2469
+R4
+Z148 8C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/shift_unit.vhd
+Z149 FC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/shift_unit.vhd
+l0
+L5 1
+VoYz=ZP:Rg2U9Eb=ZGo>940
+!s100 C4@E7NN0:UB89P^MW405S0
+R7
+32
+Z150 !s110 1603274017
+!i10b 1
+R144
+Z151 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/shift_unit.vhd|
+Z152 !s107 C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/vhdl/shift_unit.vhd|
+!i113 1
+R12
+R13
+Asynth
+R1
+R2
+R3
+DEx4 work 10 shift_unit 0 22 oYz=ZP:Rg2U9Eb=ZGo>940
+!i122 2469
+l16
+L14 154
+VZL3h8INB5DT[9Q57DOhOX2
+!s100 L]B9<D^OSG^fA;3VQ_=g71
+R7
+32
+R150
+!i10b 1
+R144
+R151
+R152
+!i113 1
+R12
+R13
+Etb_controller
+R21
+R35
+R28
+R1
+R2
+R3
+!i122 2472
+R4
+Z153 8../testbench/tb_Controller.vhd
+Z154 F../testbench/tb_Controller.vhd
+l0
+L9 1
+V3E@KN_PfWzKDMi@e_IcgN1
+!s100 QPYMI?@zF<fA]gVd9c[kS0
+R7
+31
+R31
+!i10b 1
+Z155 !s108 1603274053.000000
+Z156 !s90 -reportprogress|300|-93|../testbench/tb_Controller.vhd|
+!s107 ../testbench/tb_Controller.vhd|
+!i113 1
+o-93
+R13
+Atestbench
+R35
+R28
+R1
+R2
+R3
+DEx4 work 13 tb_controller 0 22 3E@KN_PfWzKDMi@e_IcgN1
+!i122 2472
+l102
+Z157 L15 417
+V3M1BHZOYlAHk5ZM;AdXib3
+Z158 !s100 _WkzDDFBPd:3LHMWS[AoW2
+R7
+31
+R31
+!i10b 1
+R155
+R156
+Z159 !s107 ../testbench/tb_Controller.vhd|
+!i113 1
+o-93
+R13
+Etb_extend
+R21
+Z160 DPx4 work 15 check_functions 0 22 <W1[dk2LN3hi[c?7kCXRb3
+R28
+R2
+R3
+!i122 2454
+R4
+Z161 8C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/testbench/tb_Extend.vhd
+Z162 FC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/testbench/tb_Extend.vhd
+l0
+L8 1
+Vaaa357Ec4Z]hSVLzLa]`V0
+!s100 bW1ZJ800R3O0<C<7nO4h:1
+R7
+32
+Z163 !s110 1603274008
+!i10b 1
+Z164 !s108 1603274007.000000
+Z165 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/testbench/tb_Extend.vhd|
+Z166 !s107 C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/testbench/tb_Extend.vhd|
+!i113 1
+R12
+R13
+Atestbench
+R160
+R28
+R2
+R3
+DEx4 work 9 tb_extend 0 22 aaa357Ec4Z]hSVLzLa]`V0
+!i122 2454
+l31
+L11 98
+VSUC:NKCMTg8:IYKgIcGd30
+!s100 f><EEJh?:BbXgSC^g?0XG2
+R7
+32
+R163
+!i10b 1
+R164
+R165
+R166
+!i113 1
+R12
+R13
+Etb_gecko
+R21
+R2
+R3
+!i122 2455
+R4
+Z167 8C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/testbench/tb_GECKO.vhd
+Z168 FC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/testbench/tb_GECKO.vhd
+l0
+L4 1
+V5Tbz7Kl=147iIIz>>A8Y[3
+!s100 M92[;29_Yc:FoKCCIgj]?0
+R7
+32
+R163
+!i10b 1
+Z169 !s108 1603274008.000000
+Z170 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/testbench/tb_GECKO.vhd|
+Z171 !s107 C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/testbench/tb_GECKO.vhd|
+!i113 1
+R12
+R13
+Atestbench
+R71
+R2
+R3
+DEx4 work 8 tb_gecko 0 22 5Tbz7Kl=147iIIz>>A8Y[3
+!i122 2455
+l14
+L7 39
+V6fQEk`>ELI8^:O]bcf[0k0
+!s100 1395I=^FjK==Lo:2:Ck6c3
+R7
+32
+R163
+!i10b 1
+R169
+R170
+R171
+!i113 1
+R12
+R13
+Etb_ir
+R21
+R160
+R28
+R2
+R3
+!i122 2456
+R4
+Z172 8C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/testbench/tb_IR.vhd
+Z173 FC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/testbench/tb_IR.vhd
+l0
+L8 1
+VNa]DdS==`51QO9@9@NCYO3
+!s100 dO7:P:CO76Dg9T_Q>3Mi:2
+R7
+32
+Z174 !s110 1603274009
+!i10b 1
+R169
+Z175 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/testbench/tb_IR.vhd|
+Z176 !s107 C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/testbench/tb_IR.vhd|
+!i113 1
+R12
+R13
+Atestbench
+R160
+R28
+R2
+R3
+DEx4 work 5 tb_ir 0 22 Na]DdS==`51QO9@9@NCYO3
+!i122 2456
+l32
+L11 101
+VFC]h]m]T]Ph2`Z>Ki^a?Z2
+!s100 g?YUbkdlEmZ2JbBY[dbba0
+R7
+32
+R174
+!i10b 1
+R169
+R175
+R176
+!i113 1
+R12
+R13
+Etb_pc
+R21
+R160
+R28
+R2
+R3
+!i122 2457
+R4
+Z177 8C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/testbench/tb_PC.vhd
+Z178 FC:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/testbench/tb_PC.vhd
+l0
+L8 1
+VZbiH9]DK4fmMF;^e8W7zF1
+!s100 _Sjg^6a@flK7I1KVlG]Sm2
+R7
+32
+R8
+!i10b 1
+Z179 !s108 1603274009.000000
+Z180 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/testbench/tb_PC.vhd|
+Z181 !s107 C:/Users/Maxime/Desktop/EPFL/Classe/BA3/Computer Architecture I/Projet1/CS-208Proj1/graded1/testbench/tb_PC.vhd|
+!i113 1
+R12
+R13
+Atestbench
+R160
+R28
+R2
+R3
+DEx4 work 5 tb_pc 0 22 ZbiH9]DK4fmMF;^e8W7zF1
+!i122 2457
+l42
+L11 127
+V;4TRg:;B=`LN4JkHFOfZH3
+!s100 gKH@n?YGO`P>Bz<MRbX@K0
+R7
+32
+R8
+!i10b 1
+R179
+R180
+R181
+!i113 1
+R12
+R13

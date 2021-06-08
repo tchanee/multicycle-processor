@@ -1,0 +1,9 @@
+addi t0, zero, 0x0
+addi t1, zero, 0xFFFFFFFF
+loop:
+	addi t0, t0, 0x00000001
+	stw t0, 0x2000(zero)
+	stw t0, 0x2004(zero)
+	bleu t0, t1, loop
+
+break
